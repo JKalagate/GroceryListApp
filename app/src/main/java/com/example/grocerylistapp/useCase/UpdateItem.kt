@@ -1,7 +1,7 @@
-package com.example.grocerylistapp.ui.useCase
+package com.example.grocerylistapp.useCase
 
-import com.example.grocerylistapp.data.datasource.GroceryListImpl
-import com.example.grocerylistapp.data.entity.GroceryItem
+import com.example.grocerylistapp.data.impl.GroceryListImpl
+import com.example.grocerylistapp.data.models.GroceryItem
 import javax.inject.Inject
 
 class UpdateItem @Inject constructor(private val repo: GroceryListImpl) {

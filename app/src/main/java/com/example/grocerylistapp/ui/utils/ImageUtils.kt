@@ -1,4 +1,4 @@
-package com.example.grocerylistapp.ui.viewModels
+package com.example.grocerylistapp.ui.utils
 
 import android.content.Context
 import android.graphics.Bitmap
@@ -6,43 +6,11 @@ import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.media.ExifInterface
 import android.net.Uri
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import com.example.grocerylistapp.data.datasource.GroceryListDatabase
-import com.example.grocerylistapp.data.entity.GroceryItem
-import com.example.grocerylistapp.ui.useCase.GroceryListUseCase
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import java.io.ByteArrayOutputStream
-import java.io.File
 import java.io.IOException
 import java.io.InputStream
-import javax.inject.Inject
 
-@HiltViewModel
-class AddViewModel @Inject constructor(
-    private val useCase: GroceryListUseCase
-) : ViewModel() {
-
-    var name by mutableStateOf("")
-    var productValue by mutableStateOf("")
-    var picture by mutableStateOf(byteArrayOf())
-
-    fun addItem() = viewModelScope.launch {
-        useCase.insertItem(
-            GroceryItem(
-                name = name,
-                productValue = productValue,
-                picture = picture
-            )
-        )
-    }
-
-
+class ImageUtils {
     companion object {
         fun readBytesFromUri(uri: Uri, context: Context): ByteArray? {
             var inputStream: InputStream? = null

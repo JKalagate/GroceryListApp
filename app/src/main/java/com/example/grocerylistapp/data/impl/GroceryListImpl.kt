@@ -1,8 +1,7 @@
-package com.example.grocerylistapp.data.datasource
+package com.example.grocerylistapp.data.impl
 
-import androidx.room.Dao
-import com.example.grocerylistapp.data.entity.GroceryItem
-import com.example.grocerylistapp.ui.repository.Repository
+import com.example.grocerylistapp.data.models.GroceryItem
+import com.example.grocerylistapp.data.repository.Repository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

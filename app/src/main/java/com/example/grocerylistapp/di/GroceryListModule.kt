@@ -2,14 +2,14 @@ package com.example.grocerylistapp.di
 
 import android.content.Context
 import androidx.room.Room
-import com.example.grocerylistapp.data.datasource.GroceryListDatabase
-import com.example.grocerylistapp.data.datasource.GroceryListImpl
-import com.example.grocerylistapp.ui.useCase.DeleteItem
-import com.example.grocerylistapp.ui.useCase.GetByIdItem
-import com.example.grocerylistapp.ui.useCase.GetGroceryList
-import com.example.grocerylistapp.ui.useCase.GroceryListUseCase
-import com.example.grocerylistapp.ui.useCase.InsertItem
-import com.example.grocerylistapp.ui.useCase.UpdateItem
+import com.example.grocerylistapp.data.database.GroceryListDatabase
+import com.example.grocerylistapp.data.impl.GroceryListImpl
+import com.example.grocerylistapp.useCase.DeleteItem
+import com.example.grocerylistapp.useCase.GetByIdItem
+import com.example.grocerylistapp.useCase.GetGroceryList
+import com.example.grocerylistapp.useCase.GroceryListUseCase
+import com.example.grocerylistapp.useCase.InsertItem
+import com.example.grocerylistapp.useCase.UpdateItem
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

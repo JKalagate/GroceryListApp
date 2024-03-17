@@ -1,4 +1,4 @@
-package com.example.grocerylistapp
+package com.example.grocerylistapp.ui
 
 import android.app.Application
 import android.util.Log

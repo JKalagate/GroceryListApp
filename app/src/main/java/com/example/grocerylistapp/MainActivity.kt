@@ -13,7 +13,7 @@ import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import com.example.grocerylistapp.ui.navigation.AppNavigationGraph
+import com.example.grocerylistapp.navigation.AppNavigationGraph
 import com.example.grocerylistapp.ui.theme.GroceryListAppTheme
 import com.example.grocerylistapp.ui.theme.Teal95
 import com.google.accompanist.systemuicontroller.rememberSystemUiController

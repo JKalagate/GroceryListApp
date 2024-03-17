@@ -1,14 +1,12 @@
-package com.example.grocerylistapp.ui.navigation
+package com.example.grocerylistapp.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
-import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import androidx.navigation.navArgument
-import com.example.grocerylistapp.ui.screens.AddItem
-import com.example.grocerylistapp.ui.screens.HomeScreen
+import com.example.grocerylistapp.ui.detail.DetailScreen
+import com.example.grocerylistapp.ui.home.HomeScreen
 
 @Composable
 fun AppNavigationGraph() {
@@ -19,19 +17,14 @@ fun AppNavigationGraph() {
         navController = navController,
         startDestination = Screens.HomeScreen.route,
         builder = {
-            composable(
-                route = Screens.HomeScreen.route,
-                arguments = listOf(navArgument("id") {
-                    type = NavType.IntType
-                })
-            ) {
+            composable(route = Screens.HomeScreen.route) {
                 HomeScreen(
                     navController = navController,
                     context = LocalContext.current
                 )
             }
             composable(route = Screens.AddScreen.route) {
-                AddItem(navController = navController)
+                DetailScreen(navController = navController)
             }
             
         }
@@ -39,6 +32,6 @@ fun AppNavigationGraph() {
 }
 
 sealed class Screens(val route: String) {
-    data object HomeScreen : Screens("home/{id}")
+    data object HomeScreen : Screens("home")
     data object AddScreen : Screens("add")
 }

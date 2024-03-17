@@ -1,4 +1,4 @@
-package com.example.grocerylistapp.ui.useCase
+package com.example.grocerylistapp.useCase
 
 data class GroceryListUseCase (
     val insertItem: InsertItem,
